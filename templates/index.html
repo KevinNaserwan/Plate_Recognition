@@ -17,25 +17,45 @@
             <td>
                 <img class=" rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="">
             </td>
-            <td>
-                <img class=" rounded float-right img-fluid" src="/static/predict/result.jpg" alt="">
-            </td>
         </tr>
     </table>
     <br>
     <table style=" border: solid black; width: 100%;">
         <tr style=" border: solid black;">
-            <th>Cropped License Plate Image</th>
             <th>Text</th>
         </tr>
         <tr style=" border: solid black;">
-            <td>
-                <img class=" img-fluid" src="/static/roi/plate.jpg" alt="">
-            </td>
             <td style="background-color: greenyellow;">
                 <h1 class="display-8">{{ text }}</h1>
             </td>
         </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Nama : </th>
+            <th>Brand :</th>
+            <th>Type :</th>
+            <th>Manufacture Year :</th>
+            <th>CC :</th>
+            <th>Color :</th>
+            <th>Fuel Type :</th>
+            <th>regist_year :</th>
+            <th>date_exp :</th>
+        </tr>
+
+        {% for baris in data: %}
+        <tr>
+            <td>{{ baris[1] }}</td>
+            <td>{{ baris[2] }}</td>
+            <td>{{ baris[3] }}</td>
+            <td>{{ baris[4] }}</td>
+            <td>{{ baris[5] }}</td>
+            <td>{{ baris[6] }}</td>
+            <td>{{ baris[7] }}</td>
+            <td>{{ baris[8] }}</td>
+            <td>{{ baris[9] }}</td>
+        </tr>
+        {% endfor %}
     </table>
 </div>
 

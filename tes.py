@@ -29,7 +29,7 @@ def extract_num(img_name):
         cv2.rectangle(img, (x,y), (x+w, y+h), (51,51,255), 2)
         cv2.rectangle(img, (x, y - 40), (x + w, y),(51,51,255), -1)
         cv2.putText(img,read,(x, y - 10), cv2.FONT_HERSHEY_SIMPLEX,1, (255,255,255),3)
-        # cv2.imshow('Plate',plate)
+    #     cv2.imshow('Plate',plate)
 
     # cv2.imshow("Result", img)
     cv2.imwrite('static/roi/plate.jpg', plate)
