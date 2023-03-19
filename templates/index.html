@@ -1,62 +1,66 @@
 {% extends 'layout.html' %} {% block body %}
 <div class="container">
-    <br /><br />
-    <form action="#" method="POST" enctype="multipart/form-data">
-        <div class="input-group">
-            <input type="file" class="form-control" name="image_name" required />
-            <input type="submit" value="upload" class="btn btn-outline-secondary" />
-        </div>
-    </form>
+  <br /><br />
+  <form action="#" method="POST" enctype="multipart/form-data">
+    <div class="input-group">
+      <input type="file" class="form-control" name="image_name" required />
+      <input type="submit" value="upload" class="btn btn-outline-secondary" />
+    </div>
+  </form>
 </div>
 
 {% if upload %}
 <div class="container">
-    <br><br>
-    <table>
-        <tr>
-            <td>
-                <img class=" rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="">
-            </td>
-        </tr>
-    </table>
-    <br>
-    <table style=" border: solid black; width: 100%;">
-        <tr style=" border: solid black;">
-            <th>Text</th>
-        </tr>
-        <tr style=" border: solid black;">
-            <td style="background-color: greenyellow;">
-                <h1 class="display-8">{{ text }}</h1>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <th>Nama : </th>
-            <th>Brand :</th>
-            <th>Type :</th>
-            <th>Manufacture Year :</th>
-            <th>CC :</th>
-            <th>Color :</th>
-            <th>Fuel Type :</th>
-            <th>regist_year :</th>
-            <th>date_exp :</th>
-        </tr>
+  <br /><br />
+  <table>
+    <tr>
+      <td>
+        <img
+          class="rounded float-left img-fluid"
+          src="/static/upload/{{ upload_image }}"
+          alt=""
+        />
+      </td>
+    </tr>
+  </table>
+  <br />
+  <table style="border: solid black; width: 100%">
+    <tr style="border: solid black">
+      <th>Text</th>
+    </tr>
+    <tr style="border: solid black">
+      <td style="background-color: greenyellow">
+        <h1 class="display-8">{{ text }}</h1>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <th>Nama :</th>
+      <th>Brand :</th>
+      <th>Type :</th>
+      <th>Manufacture Year :</th>
+      <th>CC :</th>
+      <th>Color :</th>
+      <th>Fuel Type :</th>
+      <th>regist_year :</th>
+      <th>date_exp :</th>
+    </tr>
 
-        {% for baris in data: %}
-        <tr>
-            <td>{{ baris[1] }}</td>
-            <td>{{ baris[2] }}</td>
-            <td>{{ baris[3] }}</td>
-            <td>{{ baris[4] }}</td>
-            <td>{{ baris[5] }}</td>
-            <td>{{ baris[6] }}</td>
-            <td>{{ baris[7] }}</td>
-            <td>{{ baris[8] }}</td>
-            <td>{{ baris[9] }}</td>
-        </tr>
-        {% endfor %}
-    </table>
+    {% for baris in data: %}
+    <tr>
+      <td>{{ baris[1] }}</td>
+      <td>{{ baris[2] }}</td>
+      <td>{{ baris[3] }}</td>
+      <td>{{ baris[4] }}</td>
+      <td>{{ baris[5] }}</td>
+      <td>{{ baris[6] }}</td>
+      <td>{{ baris[7] }}</td>
+      <td>{{ baris[8] }}</td>
+      <td>{{ baris[9] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 
 {% endif %} {% endblock %}
