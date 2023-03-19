@@ -32,8 +32,7 @@ def index():
         sqls = ('select * from kendaraan')
         cursor.execute(sqls)
         hasil = cursor.fetchall()
-        if request.method == 'POST' and sql == text:
-            return render_template('index.html', upload=True, upload_image=filename, text=text, data=hasil)
+        return render_template('index.html', upload=True, upload_image=filename, text=text, data=hasil)
 
     return render_template('index.html', upload=False)
 
