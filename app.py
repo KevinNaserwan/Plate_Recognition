@@ -19,6 +19,15 @@ BASE_PATH = os.getcwd()
 UPLOAD_PATH = os.path.join(BASE_PATH, 'static/upload')
 
 
+def get_data_by_id(nomor_plat):
+    cursor = conn.cursor()
+    query = "SELECT * FROM kendaraan WHERE nomor_plat"
+    cursor.execute(query, (nomor_plat,))
+    data = cursor.fetchone()
+    conn.close()
+    return data
+
+
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
@@ -28,13 +37,19 @@ def index():
         upload_file.save(path_save)
         text = extract_num(path_save)
         cursor = conn.cursor()
-        sql = ('select nomor_plat from kendaraan')
-        sqls = ('select * from kendaraan')
-        cursor.execute(sqls)
-        hasil = cursor.fetchall()
-        return render_template('index.html', upload=True, upload_image=filename, text=text, data=hasil)
-
-    return render_template('index.html', upload=False)
+        sql = ('select nomor_plat from kendaraan where nomor_plat = %s')
+        val = text
+        cursor.execute(sql, val)
+        hasil1 = cursor.fetchone()
+        # print(','.join(map(str, hasil1)))
+        if text == (','.join(map(str, hasil1))):
+            cursor = conn.cursor()
+            sqls = ("select * from kendaraan where nomor_plat = %s")
+            val = text
+            cursor.execute(sqls, val)
+            hasil2 = cursor.fetchall()
+            return render_template('index.html', upload=True, upload_image=filename, text=text, data=hasil2)
+    return render_template('index.html', upload=False, upload_image=filename, text=text)
 
 
 if __name__ == "__main__":
