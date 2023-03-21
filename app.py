@@ -42,6 +42,8 @@ def index():
         cursor.execute(sql, val)
         hasil1 = cursor.fetchone()
         # print(','.join(map(str, hasil1)))
+        if hasil1 == None:
+            return render_template('index.html', upload=True, upload_image=filename, text=text)
         if text == (','.join(map(str, hasil1))):
             cursor = conn.cursor()
             sqls = ("select * from kendaraan where nomor_plat = %s")
@@ -49,7 +51,7 @@ def index():
             cursor.execute(sqls, val)
             hasil2 = cursor.fetchall()
             return render_template('index.html', upload=True, upload_image=filename, text=text, data=hasil2)
-    return render_template('index.html', upload=False, upload_image=filename, text=text)
+    return render_template('index.html')
 
 
 if __name__ == "__main__":

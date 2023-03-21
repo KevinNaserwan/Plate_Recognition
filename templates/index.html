@@ -35,29 +35,33 @@
     </tr>
   </table>
   <table>
-    <tr>
-      <th>Nama :</th>
-      <th>Brand :</th>
-      <th>Type :</th>
-      <th>Manufacture Year :</th>
-      <th>CC :</th>
-      <th>Color :</th>
-      <th>Fuel Type :</th>
-      <th>regist_year :</th>
-      <th>date_exp :</th>
-    </tr>
-
     {% for baris in data: %}
     <tr>
-      <td>{{ baris[1] }}</td>
-      <td>{{ baris[2] }}</td>
-      <td>{{ baris[3] }}</td>
-      <td>{{ baris[4] }}</td>
-      <td>{{ baris[5] }}</td>
-      <td>{{ baris[6] }}</td>
-      <td>{{ baris[7] }}</td>
-      <td>{{ baris[8] }}</td>
-      <td>{{ baris[9] }}</td>
+      <th>Nama : {{ baris[1] }}</th>
+    </tr>
+    <tr>
+      <th>Brand : {{ baris[2] }}</th>
+    </tr>
+    <tr>
+      <th>Type : {{ baris[3] }}</th>
+    </tr>
+    <tr>
+      <th>Manufacture Year : {{ baris[4] }}</th>
+    </tr>
+    <tr>
+      <th>CC : {{ baris[5] }}</th>
+    </tr>
+    <tr>
+      <th>Color : {{ baris[6] }}</th>
+    </tr>
+    <tr>
+      <th>Fuel Type : {{ baris[7] }}</th>
+    </tr>
+    <tr>
+      <th>regist_year : {{ baris[8] }}</th>
+    </tr>
+    <tr>
+      <th>date_exp : {{ baris[9] }}</th>
     </tr>
     {% endfor %}
   </table>
