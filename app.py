@@ -39,11 +39,12 @@ def index():
         cursor = conn.cursor()
         sql = ('select nomor_plat from kendaraan where nomor_plat = %s')
         val = text
+        warning = "Plat Tidak dikenali"
         cursor.execute(sql, val)
         hasil1 = cursor.fetchone()
         # print(','.join(map(str, hasil1)))
         if hasil1 == None:
-            return render_template('index.html', upload=True, upload_image=filename, text=text)
+            return render_template('index.html', upload=True, upload_image=filename, text=warning)
         if text == (','.join(map(str, hasil1))):
             cursor = conn.cursor()
             sqls = ("select * from kendaraan where nomor_plat = %s")
