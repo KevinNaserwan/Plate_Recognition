@@ -1,70 +1,66 @@
 {% extends 'layout.html' %} {% block body %}
 <div class="container">
-  <br /><br />
-  <form action="#" method="POST" enctype="multipart/form-data">
-    <div class="input-group">
-      <input type="file" class="form-control" name="image_name" required />
-      <input type="submit" value="upload" class="btn btn-outline-secondary" />
-    </div>
-  </form>
+    <br /><br />
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="file" class="form-control" name="image_name" required />
+            <input type="submit" value="upload" class="btn btn-outline-secondary" />
+        </div>
+    </form>
 </div>
 
 {% if upload %}
 <div class="container">
-  <br /><br />
-  <table>
-    <tr>
-      <td>
-        <img
-          class="rounded float-left img-fluid"
-          src="/static/upload/{{ upload_image }}"
-          alt=""
-        />
-      </td>
-    </tr>
-  </table>
-  <br />
-  <table style="border: solid black; width: 100%">
-    <tr style="border: solid black">
-      <th>Text</th>
-    </tr>
-    <tr style="border: solid black">
-      <td style="background-color: greenyellow">
-        <h1 class="display-8">{{ text }}</h1>
-      </td>
-    </tr>
-  </table>
-  <table>
-    {% for baris in data: %}
-    <tr>
-      <th>Nama : {{ baris[1] }}</th>
-    </tr>
-    <tr>
-      <th>Brand : {{ baris[2] }}</th>
-    </tr>
-    <tr>
-      <th>Type : {{ baris[3] }}</th>
-    </tr>
-    <tr>
-      <th>Manufacture Year : {{ baris[4] }}</th>
-    </tr>
-    <tr>
-      <th>CC : {{ baris[5] }}</th>
-    </tr>
-    <tr>
-      <th>Color : {{ baris[6] }}</th>
-    </tr>
-    <tr>
-      <th>Fuel Type : {{ baris[7] }}</th>
-    </tr>
-    <tr>
-      <th>regist_year : {{ baris[8] }}</th>
-    </tr>
-    <tr>
-      <th>date_exp : {{ baris[9] }}</th>
-    </tr>
-    {% endfor %}
-  </table>
+    <br /><br />
+    <table>
+        <tr>
+            <td>
+                <img class="rounded float-left img-fluid" src="/static/upload/{{ upload_image }}" alt="" />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table style="border: solid black; width: 100%">
+        <tr style="border: solid black">
+            <th>Text</th>
+        </tr>
+        <tr style="border: solid black">
+            <td style="background-color: greenyellow">
+                <h1 class="display-8">{{ text }}</h1>
+            </td>
+        </tr>
+    </table>
+    <table>
+        {% for baris in data: %}
+        <tr>
+            <th>Nama : {{ baris[1] }}</th>
+        </tr>
+        <tr>
+            <th>Brand : {{ baris[2] }}</th>
+        </tr>
+        <tr>
+            <th>Type : {{ baris[3] }}</th>
+        </tr>
+        <tr>
+            <th>Manufacture Year : {{ baris[4] }}</th>
+        </tr>
+        <tr>
+            <th>CC : {{ baris[5] }}</th>
+        </tr>
+        <tr>
+            <th>Color : {{ baris[6] }}</th>
+        </tr>
+        <tr>
+            <th>Fuel Type : {{ baris[7] }}</th>
+        </tr>
+        <tr>
+            <th>regist_year : {{ baris[8] }}</th>
+        </tr>
+        <tr>
+            <th>date_exp : {{ baris[9] }}</th>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 
 {% endif %} {% endblock %}

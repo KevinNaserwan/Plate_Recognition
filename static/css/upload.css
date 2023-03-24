@@ -1,0 +1,99 @@
+.beranda {
+  position: relative;
+  width: 1600px;
+  height: 2350px;
+  align-items: flex-start;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.navbar .logoplate {
+  color: #ce9f59;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 132.5172px;
+  top: 63px;
+  width: 131.431px;
+  height: 37px;
+  flex-direction: column;
+}
+
+.navbar .menu .Home a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 581px;
+  top: 74px;
+  width: 109.7069px;
+  height: 37px;
+  flex-direction: column;
+}
+
+.navbar .menu .Contact a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 896px;
+  top: 74px;
+  width: 141.2069px;
+  height: 37px;
+  flex-direction: column;
+}
+
+.navbar .menu .Account a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 732px;
+  top: 74px;
+  width: 133px;
+  height: 37px;
+  flex-direction: column;
+}
+
+.navbar .masuk .textlogin {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  left: 1128px;
+  top: 71px;
+  width: 92px;
+  height: 37px;
+  flex-direction: column;
+}
+
+.navbar .register {
+  position: absolute;
+  left: 1257px;
+  top: 60px;
+  width: 143px;
+  height: 63px;
+  background-color: #ce9f59;
+}
+
+.navbar .register .textregister {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  position: absolute;
+  padding-top: 11px;
+  padding-left: 26px;
+  flex-direction: column;
+}
